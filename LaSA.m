@@ -25,7 +25,7 @@ for iter = 1:maxIter
 
     %% Feature learning on complete data;
     for v = 1:numView
-        [U{v}] = GraphFiltering(data{v}, A{i}, index{v}, alpha);
+        [U{v}] = GraphFiltering(data{v}, A{v}, index{v}, alpha);
     end
 
     %% Incomplete data represetation inferring
@@ -50,4 +50,5 @@ end
 FinalResult = ClusteringMeasure_new(truelabel{1}, predictLabel)
 
 end
+
 
